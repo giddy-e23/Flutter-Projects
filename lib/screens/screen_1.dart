@@ -1,55 +1,13 @@
+import 'package:bank_app/screens/screen_2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:bank_app/utilities/customer_data.dart';
 
 
-void main() {
-  runApp(const BankApp());
-}
-
-class BankApp extends StatelessWidget {
-  const BankApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: TransferPage(),
-      title: "Bank App",
-    );
-  }
-}
-
-class Customer {
-  String name = "";
-  String accBalance = "";
-  String time = "";
-  Customer({required this.name, required this.time, required this.accBalance});
-}
 
 class TransferPage extends StatelessWidget {
   TransferPage({super.key});
-  var personOne = Customer(
-      name: "Alexandria", time: "Yesterday-19:12", accBalance: "Rp 600.000");
-  var personTwo = Customer(
-      name: "Immanuel", time: "May 31,2023-09:13", accBalance: "Rp 200.000");
-  var personThree = Customer(
-      name: "Maybank-Alex...",
-      time: "May 13,2023-21:54",
-      accBalance: "Rp 745.000");
-  var personFour = Customer(
-      name: "Kayshania", time: "April 27,2023-2029", accBalance: "Rp 57.000");
-  var personFive = Customer(
-      name: "BRI-Akhmad...",
-      time: "April 12,2023-04:18",
-      accBalance: "Rp 450.000");
-  var personSix = Customer(
-      name: "BRI-Akhmad...",
-      time: "April 12,2023-04:18",
-      accBalance: "Rp 450.000");
-  var personSeven = Customer(
-      name: "Ibrahimi", time: "April 12,2023-04:18", accBalance: "Rp 128.000");
+
 
   @override
   Widget build(BuildContext context) {
@@ -57,10 +15,7 @@ class TransferPage extends StatelessWidget {
       backgroundColor: Colors.deepPurple,
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-        ),
+
         title: const Center(
             child: Text(
           "Transfer",
@@ -334,6 +289,7 @@ class TransferPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   ListTile(
                     leading: const CircleAvatar(
                       radius: 30.0,
